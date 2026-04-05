@@ -186,7 +186,7 @@
                 <p> I'm a beginner web developer learning to build websites from scratch. this is my first portfolio page.</p>
             </div>
         <h2 id="skills"><i class="fa-solid fa-code"></i> My Skills</h2>
-            <ul>
+            <ul id="skillsList">
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
@@ -234,8 +234,10 @@
                 }
             }
             let skills = ["HTML", "CSS", "JavaScript"];
+            let skillslist = document.getElementById("skillsList");
+
             for (let i = 0; i < skills.length; i++) {
-                console.log(skills[i]);
+                skillslist.innerHTML += "<li>" + skills[i] + "</li>";
             }
         </script>
     </body>
