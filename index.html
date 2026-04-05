@@ -178,6 +178,7 @@
                 <li><a href="#about">about</a></li>
                 <li><a href="#skills">skills</a></li>
                 <li><a href="#contact">contact</a></li>
+                <li><a href="#projects">projects</a></li>
             </ul>
         </nav>
         <div class="container">
@@ -248,7 +249,7 @@
             fetch("https://api.adviceslip.com/advice")
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById("adviceText").innerText = data.slip.advice;
+                      document.getElementById("adviceText").innerText = data.slip.advice;
                 });
         }
         </script>
