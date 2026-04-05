@@ -217,25 +217,30 @@
         </div>
         </div>
         <script>
-            function contactMe() {
-                document.getElementById("contactMessage").innerText = "Thanks for reaching out! I'll get back to you soon";
-            }
-           if (name === "" || email === "" || message === "") {
-             document.getElementById("contactMessage").innerText = "Please fill in all fields.";
+           function contactMe() {
+            document.getElementById("contactMessage").innerText = "Thanks for reaching out! I'll get back to you soon";
+        }
+        function isValidEmail(email) {
+            return email.includes("@") && email.includes(".");
+        }
+        function submitForm() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+            if (name === "" || email === "" || message === "") {
+                document.getElementById("contactMessage").innerText = "Please fill in all fields.";
             } else if (!isValidEmail(email)) {
                 document.getElementById("contactMessage").innerText = "Please enter a valid email address!";
             } else {
                 document.getElementById("contactMessage").innerText = "Thanks! " + name + ", for reaching out! I'll get back to you soon.";
             }
-            let skills = ["HTML", "CSS", "JavaScript",];
-            let skillslist = document.getElementById("skillsList");
+        }
+let skills = ["HTML", "CSS", "JavaScript"];
+let skillsList = document.getElementById("skillsList");
 
-            for (let i = 0; i < skills.length; i++) {
-                skillslist.innerHTML += "<li>" + skills[i] + "</li>";
-            }
-            function isValidEmail(email) {
-                return email.includes("@") && email.includes(".");
-            }
+for (let i = 0; i < skills.length; i++) {
+  skillsList.innerHTML += "<li>" + skills[i] + "</li>";
+}
         </script>
     </body>
 </html>
