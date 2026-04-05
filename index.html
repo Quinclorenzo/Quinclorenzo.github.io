@@ -206,6 +206,10 @@
                 <a href="#" target="_blank">Stay Tuned!</a>
             </div>
         </div>
+        <h2><i class="fa-solid fa-lightbulb"></i> Random Advice</h2>
+        <p>Need som inspiration? Click the button!</p>
+        <button onclick="getAdvice()">Get Advice</button>
+        <p id="adviceText"></p>
         <h2 id="contact"><i class="fa-solid fa-envelope"></i> Contact Me</h2>
         <p>Want to get in touch? Fill out the form below!</p>
         <div class="form">
@@ -235,12 +239,18 @@
                 document.getElementById("contactMessage").innerText = "Thanks! " + name + ", for reaching out! I'll get back to you soon.";
             }
         }
-let skills = ["HTML", "CSS", "JavaScript"];
-let skillsList = document.getElementById("skillsList");
-
-for (let i = 0; i < skills.length; i++) {
-  skillsList.innerHTML += "<li>" + skills[i] + "</li>";
-}
+        let skills = ["HTML", "CSS", "JavaScript"];
+        let skillsList = document.getElementById("skillsList");
+        for (let i = 0; i < skills.length; i++) {
+            skillsList.innerHTML += "<li>" + skills[i] + "</li>";
+        }
+        functioin getAdvice() {
+            fetch("https://api.adviceslip.com/advice")
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("adviceText").innerText = data.slip.advice;
+                });
+        }
         </script>
     </body>
 </html>
