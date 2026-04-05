@@ -244,7 +244,7 @@
         for (let i = 0; i < skills.length; i++) {
             skillsList.innerHTML += "<li>" + skills[i] + "</li>";
         }
-        functioin getAdvice() {
+        function getAdvice() {
             fetch("https://api.adviceslip.com/advice")
                 .then(response => response.json())
                 .then(data => {
