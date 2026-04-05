@@ -185,17 +185,23 @@
                 font-weight: 600;
                 color: #3e2a20;
             }
-            .progress-bar {
-                background-color: #e8d8c3;
-                border-radius: 8px;
-                height: 12px;
-                width: 100%;
-            }
-            .progress {
-                background-color: #3e2a20;
-                height: 12px;
-                border-radius: 8px;
-            }
+           .progress-bar {
+            background-color: #e8d8c3;
+            border-radius: 8px;
+            height: 28px;
+            width: 100%;
+            position: relative;
+        }
+        .progress {
+            background-color: #3e2a20;
+            height: 28px;
+            border-radius: 8px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+        }
         </style>
     </head>
     <body>
@@ -217,28 +223,31 @@
         <div class="skill">
             <div style="display: flex; justify-content: space-between;">
                 <p>HTML</p>
-                <p>80%</p>
             </div>
             <div class="progress-bar">
-                <div class="progress" style="width: 80%"></div>
+                <div class="progress" style="width: 80%">
+                    <span style="color: #edd8c2; font-size: 12px; font-weight: 600;">80%</span>
+                </div>
             </div>
         </div>
         <div class="skill">
             <div style="display: flex; justify-content: space-between;">
                 <p>CSS</p>
-                <p>60%</p>
             </div>
             <div class="progress-bar">
-                <div class="progress" style="width: 60%"></div>
+                <div class="progress" style="width: 60%">
+                    <span style="color: #edd8c2; font-size: 12px; font-weight: 600;">60%</span>
+                </div>
             </div>
         </div>
         <div class="skill">
             <div style="display: flex; justify-content: space-between;">
                 <p>JavaScript</p>
-                <p>35%</p>
             </div>
             <div class="progress-bar">
-                <div class="progress" style="width: 35%"></div>
+                <div class="progress" style="width: 35%">
+                    <span style="color: #edd8c2; font-size: 12px; font-weight: 600;">35%</span>
+                </div>
             </div>
         </div>
         <h2 id="projects"><i class="fa-solid fa-folder-open"></i> My Projects</h2>
